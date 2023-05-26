@@ -1,0 +1,100 @@
+/*
+1. Definición de CSS:
+Lenguaje utilizado para describir como se presenta un HTML. 
+Este proporciona reglas y estilos. 
+*/
+
+/*
+2. Explicar una regla de CSS:
+Consiste de un selector y una declaración. 
+En la declaración se escuentran propiedades (i.e color) y valores (i.e red).
+*/
+
+h1 { /*selector*/
+    color: red; /*declaración*/
+}
+
+
+/*
+3. Explicar con ejemplos los 4 conceptos de CSS
+*/
+
+/*
+SELECTORES:
+Eligen elementos HTML a los cuales se le aplicaran los estilos.
+Ejemplos:
+
+1) *{
+2) h1{ 
+3) .elementoClass{
+4) #elementoID{
+*/
+
+/*
+ESPECIFICIDAD:
+Dicta que estilo se aplicara en el caso de reglas 
+CSS conflictivas que se dirigen al mismo elemento
+
+La especificidad se calucla mediante la comparación 
+de valores numericos de los SECTORES.
+
+Etiqueta = 1
+ejemplo -> h1{
+
+Clase = 10
+ejemplo -> .elementoClass{
+
+Id  = 100
+ejemplo -> #elementoID{
+
+Inline = 1000
+ejemplo -> applicado directamente a html utilizando el atributo "style".
+   "style" permite definir 1 o más PROPIEDADES de css.
+
+   CSS:
+   .elementoClass {
+    color: blue;
+   }
+
+   HTML:
+   <div class="elementoClass" style="color: blue;">css</div>
+
+!important = infinito
+ejemplo -> .elementoClass{
+    color: blue !important;
+    }
+
+*/
+
+/*
+CASCADA:
+
+El ultimo valor es el determinante mientras que la especificidad sea la misma
+
+Ejemplo:
+
+.elementoClass{
+    color: blue inline;
+}
+
+.elementoID {
+    color: green;
+}
+
+Resultado:
+green
+
+*/
+
+/*
+HERENCIA:
+hijo hereda de padre
+
+*/
+.elementoClass{
+    color: blue inline;
+}
+
+#elementoID {
+    color: green;
+}

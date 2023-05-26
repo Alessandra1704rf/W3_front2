@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Explicación de conceptos css</h1>
+    <h2> 1. Definición de CSS:</h2>
+    <h3>Lenguaje utilizado para describir cómo se presenta un HTML. Este proporciona reglas y estilos.</h3>
+
+    <h2> 2. Explicar una regla de CSS:</h2>
+    <h3>Consiste de un selector y una declaración. En la declaración se encuentran propiedades (i.e color) y valores (i.e red). </h3>
+
+    <pre>
+    h1 { //selector
+        color: red; //declaración
+    }
+    </pre>
+
+    <h2> 3. Explicar con ejemplos los 4 conceptos de CSS:</h2>
+
+    <h3>SELECTORES:</h3>
+    <p>Dirige las REGLAS a elementos específicos.</p>
+    <pre>
+    1) * {
+    2) h1 {
+    3) .elementoClass {
+    4) #elementoID {
+    </pre>
+
+    <h3>ESPECIFICIDAD:</h3>
+    <p>Dicta qué estilo se aplicará en el caso de reglas CSS conflictivas (que se dirigen al mismo elemento). La especificidad se calcula mediante la comparación de valores numéricos de los SELECTORES.</p>
+    
+    <pre>
+    Etiqueta = 1
+    Ejemplo -> h1 {
+
+    Clase = 10
+    Ejemplo -> .elementoClass {
+
+    ID = 100
+    Ejemplo -> #elementoID {
+
+    Inline = 1000
+    Ejemplo -> aplicado directamente a HTML utilizando el atributo "style".
+    "style" permite definir 1 o más PROPIEDADES de CSS.
+
+    !important = infinito
+    Ejemplo -> .elementoClass {
+        color: blue !important;
+    }
+    </pre>
+
+    <h3>CASCADA:</h3>
+    <p>El último valor es el determinante mientras que la especificidad sea la misma.</p>
+    <pre>
+    .elementoClass {
+        color: blue inline;
+    }
+
+    .elementoID {
+        color: green;
+    }
+
+    Resultado:
+    green
+    </pre>
+
+    <h3>HERENCIA:</h3>
+    <p>Los estilos de "elementos padre" se propagan a elemenos descendientes.</p>
+    <pre>
+        Ejemplo:
+
+        HTML (sin < para que aparezca en web): 
+        div
+            a href = "#" Hola /a
+        /div
+        
+        CSS:
+        div{
+            color: red;
+        }
+        a{
+            color: inherit;
+        }
+    </pre>
+    
+</body>
+</html>
