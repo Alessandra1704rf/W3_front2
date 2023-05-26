@@ -33,7 +33,7 @@
     </pre>
 
     <h3>ESPECIFICIDAD:</h3>
-    <p>Dicta qué estilo se aplicará en el caso de reglas CSS conflictivas (que se dirigen al mismo elemento). La especificidad se calcula mediante la comparación de valores numéricos de los SELECTORES.</p>
+    <p>Dicta qué estilo se aplicará en el caso de reglas CSS conflictivas que se dirigan al mismo elemento. La especificidad se calcula mediante la comparación de valores numéricos de los SELECTORES. El "mayor" es el estilo prominente.</p>
     
     <pre>
     Etiqueta = 1
@@ -59,7 +59,7 @@
     <p>El último valor es el determinante mientras que la especificidad sea la misma.</p>
     <pre>
     .elementoClass {
-        color: blue inline;
+        color: blue;
     }
 
     .elementoID {
